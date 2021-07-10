@@ -9,7 +9,52 @@
 </head>
 <body>
     <div class="container">
-        <div class="fondo"></div>
+        <div class="fondo">
+            <div class="box login">
+                <h2>¿Tienes cuenta?</h2>
+                <button class="logbutton">Ingresar</button>
+            </div>
+            <div class="box registro">
+                <h2>¿No tienes una cuenta?</h2>
+                <button class="regbutton">Regístrate</button>
+            </div>
+        </div>
+        <div class="formBx">
+            <div class="form loginform">
+                <form action="">
+                    <h3>Login</h3>
+                    <input type="text" placeholder="Usuario">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="submit" value="Login">
+                    <a href="#" class="forgot">¿Olvidaste tu Contraseña?</a>
+                </form>
+            </div>
+            <div class="form regform">
+                <form action="">
+                    <h3>Registro</h3>
+                    <input type="text" placeholder="Usuario">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="password" placeholder=" Confirma tu Contraseña">
+                    <input type="submit" value="Registro">
+                </form>
+            </div>
+        </div>
     </div>
+    <script>
+        const logbutton = document.querySelector('.logbutton');
+        const regbutton = document.querySelector('.regbutton');
+        const formBx = document.querySelector('.formBx');
+        const body = document.querySelector('body')
+
+        regbutton.onclick = function(){
+            formBx.classList.add('active')
+            body.classList.add('active')
+        }
+        logbutton.onclick = function(){
+            formBx.classList.remove('active')
+            body.classList.remove('active')
+        }   
+    </script>
 </body>
 </html>
